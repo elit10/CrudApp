@@ -1,0 +1,30 @@
+﻿@model CrudApp.Models.LearningPathModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>LearningPathModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MIPID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MIPID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LPName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LPName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.LPID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

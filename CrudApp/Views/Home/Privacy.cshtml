@@ -1,21 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "CrudApp";
+    ViewData["Title"] = "EmployeeDB";
 }
 <h1>@ViewData["Title"]</h1>
 
-
 <h2>Application Overview</h2>
 
-<p>The aim of this application is to develop a full-fledged CRUD (Create, Read, Update, Delete) application utilizing the power of .NET 7.0, ASP.NET Core, and ADO.NET for interaction with a SQL Server database via stored procedures.</p>
+<p>The aim of this application is to develop a full-fledged CRUD (Create, Read, Update, Delete) application utilizing the power of .NET 7.0, ASP.NET Core, and Entity Framework Core for interaction with a PostgreSQL database.</p>
 
 <h3>Technologies Used</h3>
 
 <p>
     - <strong>ASP.NET Core</strong>: It's a free, open-source, high-performance framework for building modern, cloud-based, Internet-connected applications. It is the next generation of ASP.NET, enabling developers to build dynamic, data-driven web applications.<br>
 
-    - <strong>ADO.NET</strong>: It is a set of computer software components in .NET that allows developers to access data and data services. It provides a bridge between front-end controls and back-end databases.<br>
+    - <strong>Entity Framework Core</strong>: It is a modern object-relational mapping (ORM) framework that simplifies database interaction in .NET applications. It allows developers to work with databases using strongly-typed .NET objects and LINQ queries.<br>
 
-    - <strong>SQL Stored Procedure</strong>: It's a prepared SQL code that you can save, so the code can be reused over and over again. They can take in input parameters and return multiple values of output parameters; in addition, they can encapsulate logic to manipulate database data.<br>
+    - <strong>PostgreSQL</strong>: An advanced, open-source relational database management system known for its reliability, performance, and robust features. It is the chosen database for this application.<br>
 
     - <strong>.NET 7.0</strong>: This is the latest major release of the .NET platform as of your project's creation. It includes improvements to the runtime, libraries, and ASP.NET Core framework, among other things.<br>
 </p>
@@ -23,10 +22,10 @@
 <h3>Core Features</h3>
 
 <p>
-    1. <strong>Create</strong>: The application allows users to create new data entries, which are then inserted into the SQL Server database through ADO.NET using stored procedures.<br>
-    2. <strong>Read</strong>: Users can view existing records from the database. The data fetching happens through ADO.NET and stored procedures, presenting the data to the user in a digestible format.<br>
-    3. <strong>Update</strong>: The application supports updating existing records. Users can modify the data, which is then sent back to the SQL Server database through a stored procedure.<br>
-    4. <strong>Delete</strong>: Users can remove existing entries from the database. This is achieved by using a stored procedure that removes records based on a specific ID or another unique identifier.<br>
+    1. <strong>Create</strong>: The application allows users to create new data entries, which are then inserted into the PostgreSQL database using Entity Framework Core for data access.<br>
+    2. <strong>Read</strong>: Users can view existing records from the database. Data fetching happens through Entity Framework Core, presenting the data to the user in a digestible format.<br>
+    3. <strong>Update</strong>: The application supports updating existing records. Users can modify the data, which is then updated in the PostgreSQL database using Entity Framework Core.<br>
+    4. <strong>Delete</strong>: Users can remove existing entries from the database. This is achieved by removing records from the PostgreSQL database using Entity Framework Core.<br>
 </p>
 
 <h3>Application Architecture</h3>
@@ -36,9 +35,9 @@
 
     - The <strong>presentation layer</strong> is built with ASP.NET Core, responsible for handling user interactions, displaying data, and capturing user inputs.<br>
 
-    - The <strong>business logic layer</strong> is also designed with .NET 7.0, serving as an intermediary for data exchange between the presentation layer and data access layer. It contains the essential operational logic that handles the data sent to and received from the data access layer.<br>
+    - The <strong>business logic layer</strong> is designed with .NET 7.0, serving as an intermediary for data exchange between the presentation layer and data access layer. It contains the essential operational logic that handles the data sent to and received from the data access layer.<br>
 
-    - The <strong>data access layer</strong> uses ADO.NET to interact with the SQL Server database. This is where stored procedures are called to perform CRUD operations.<br>
+    - The <strong>data access layer</strong> uses Entity Framework Core to interact with the PostgreSQL database. Entity Framework Core provides an abstraction over database operations, enabling seamless CRUD operations.<br>
 </p>
 
 <p>This architecture ensures a clean and scalable structure that is easier to maintain and extend. It allows for the centralization of business logic, easy modification of the database without affecting the presentation layer, and a consistent approach to data access operations.</p>

@@ -51,7 +51,7 @@ namespace CrudApp.Controllers
 					TempData["errorMessage"] = "Unable to save the data";
 					return View();
 				}
-				TempData["successMessage"] = "Employee details saved";
+				TempData["successMessage"] = "Engineer details saved";
 				return RedirectToAction("Index");
 			}
 			catch (Exception ex)
@@ -69,7 +69,7 @@ namespace CrudApp.Controllers
                 Employee employee = _dal.GetById(id);
                 if (employee.Id == 0)
                 {
-                    TempData["errorMessage"] = $"Employee details not found with Id: {id}";
+                    TempData["errorMessage"] = $"Engineer details not found with Id: {id}";
                     return RedirectToAction("Index");
                 }
                 return View(employee);
@@ -100,7 +100,7 @@ namespace CrudApp.Controllers
                     TempData["errorMessage"] = "Unable to save the data";
                     return View();
                 }
-                TempData["successMessage"] = "Employee details saved";
+                TempData["successMessage"] = "Engineer details saved";
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -118,7 +118,7 @@ namespace CrudApp.Controllers
                 Employee employee = _dal.GetById(id);
                 if (employee.Id == 0)
                 {
-                    TempData["errorMessage"] = $"Employee details not found with Id: {id}";
+                    TempData["errorMessage"] = $"Engineer details not found with Id: {id}";
                     return RedirectToAction("Index");
                 }
                 return View(employee);
@@ -145,7 +145,7 @@ namespace CrudApp.Controllers
                     TempData["errorMessage"] = "Unable to delete the data";
                     return View();
                 }
-                TempData["successMessage"] = "Employee details deleted";
+                TempData["successMessage"] = "Engineer details deleted";
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
